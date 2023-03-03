@@ -43,6 +43,23 @@ barchartGC(~race + eatout,data=mydata, type="percent")
 ```
 
 
+The plot shows that white people say yes to eating out more than black people.
+
+
+
+```{r}
+table1 <- xtabs(~race + eatout, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
+The numerical results show that white people say yes to eating out 83.11% of the time. While black people eat out 69.94% of the time, and the other ate out 72.12% of the time, so the white people ate out more than black people.
+
+
+```{r}
+fisherXY(mydata$race,mydata$eatout, printAll =TRUE)
+```
 
 
 
